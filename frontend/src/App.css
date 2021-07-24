@@ -18,9 +18,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   background-color: var(--secondary-clr);
   color: var(--primary-clr);
-  height: 20vh;
-
+  height: 40vh;
+  font-family: Orbitron;
+  letter-spacing: 0.3125rem;
 }
