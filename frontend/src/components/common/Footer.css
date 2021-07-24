@@ -1,0 +1,115 @@
+footer {
+    background-color: var(--secondary-clr);
+    background-image: linear-gradient(147deg, var(--secondary-clr) 0%, #000000 74%);
+    width: 100%;
+    height: fit-content;
+    padding: 0.5rem 0rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--primary-clr);
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: var(--accent-clr);
+    text-decoration: underline;
+}
+
+#contactContainer {
+    color: var(--primary-clr)
+}
+
+#textContact {
+    text-align: center;
+    font-family: var(--font-heading);
+    letter-spacing: 0.3125rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+#linksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#emailContainer{
+    font-size: 1rem;
+    font-family: var(--font-text);
+    color: var(--primary-clr);
+}
+
+#emailContainer p {
+    margin: 0;
+}
+
+#socialMediaContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#socialMediaContainer ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline;
+    margin: 0;
+}
+
+#socialMediaContainer li {
+    float: left;
+    padding-right: 0.625rem;
+    font-size: 1rem;
+}
+
+.footer-copyright {
+    margin: 1rem 0;
+}
+
+.footer-copyright p{
+    color: var(--primary-clr);
+    margin: 0;
+    font-size: 0.5rem;
+}
+
+.footer-copyright a{
+    color: var(--accent-clr);
+}
+
+@media (min-width: 768px) { 
+    .footer-copyright p{
+        font-size: 0.75rem;
+    }
+    #emailContainer, #socialMediaContainer li{
+        font-size: 1.25rem;
+    }
+    #textContact {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-copyright p{
+        font-size: 0.75rem;
+    }
+    #emailContainer, #socialMediaContainer li{
+        font-size: 1.5rem;
+    }
+    #textContact {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .footer-copyright p{
+        font-size: 1rem;
+    }
+    #emailContainer, #socialMediaContainer li{
+        font-size: 2rem;
+    }
+    #textContact {
+        font-size: 2.5rem;
+    }
+}
