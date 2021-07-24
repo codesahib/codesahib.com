@@ -21,11 +21,12 @@ function CoursesforDate(props) {
         </center>
         <div className="courseContainer">
             { courseList === undefined? <h2 id="textNoCourses">No Courses Found</h2> : courseList.map((course)=> {
+                let index = courseList.indexOf(course) + 1
                 return(
                     <div className='course'>
                         <div className='detailContainer'>
                             <span className='courseHeading'>{course.title}</span><br />
-                            <a className='courseButton' href="{course.link}" target="_blank">Get Course</a>
+                            <Link className='courseButton' target="_blank" to={`/blogs/udemy-free-courses/${date}/course${index}`}>Get Course</Link>
                         </div>
                     </div>
                 )

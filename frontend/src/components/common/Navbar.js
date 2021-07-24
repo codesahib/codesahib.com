@@ -6,9 +6,11 @@ import Blogs from '../blogs/Blogs'
 import BlogPage from '../blogs/BlogPage'
 import PageNotFound from '../common/PageNotFound'
 import UdemyLandingPage from '../udemy/LandingPage'
+import CoursesforDate from '../udemy/CoursesforDate'
+import CoursePage from '../udemy/CoursePage'
 
 import './Navbar.css'
-import CoursesforDate from '../udemy/CoursesforDate'
+
 
 {/*
 
@@ -62,6 +64,7 @@ export default function Navbar(props) {
                 <Route exact path="/blogs/udemy-free-courses"><UdemyLandingPage show_home_link={setHomeLink} /></Route>
                 <Route exact path="/blogs/:blog_name"><BlogPage show_home_link={setHomeLink} /></Route>
                 <Route exact path="/blogs/udemy-free-courses/:date"><CoursesforDate show_home_link={setHomeLink} /></Route>
+                <Route exact path="/blogs/udemy-free-courses/:date/course:index"><CoursePage show_home_link={setHomeLink} /></Route>
                 <Route><PageNotFound show_home_link={setHomeLink} /></Route>
             </Switch>
         {/* </Router> */}
