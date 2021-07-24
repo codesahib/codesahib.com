@@ -1,17 +1,13 @@
-import React from 'react'
+import {React, useState} from 'react'
 import { withRouter,Link } from 'react-router-dom'
+import Data from '../../data/courses.json'
 
 import './CoursesforDate.css'
 
 function CoursesforDate(props) {
     var date = props.match.params.date;
+    const [courseList, setCourseList] = useState(Data[date])
     // API call here using 'date'
-    var courseList = [
-            {"title":"Flutter Music Player App with State Management from Scratch",
-            "link":"https://www.udemy.com/course/flutter-music-player-app-with-state-management-from-scratch/?couponCode=FREE-FOR-3-DAYS"},
-            {"title":"Python for beginners - Learn all the basics of python",
-            "link":"https://www.udemy.com/course/python-for-beginners-learn/?couponCode=5BF87C5DE9558ED5C3C8"}
-        ]
 
     return (
         <>
@@ -23,13 +19,13 @@ function CoursesforDate(props) {
             </div>
             <h1>Free course list for {date}</h1>
         </center>
-        <div class="courseContainer">
-            { courseList.length === 0? <h2 id="textNoCourses">No Courses Found</h2> : courseList.map((course)=> {
+        <div className="courseContainer">
+            { courseList === undefined? <h2 id="textNoCourses">No Courses Found</h2> : courseList.map((course)=> {
                 return(
-                    <div class='course'>
-                        <div class='detailContainer'>
-                            <span class='courseHeading'>{course.title}</span><br />
-                            <a class='courseButton' href="{course.link}" target="_blank">Get Course</a>
+                    <div className='course'>
+                        <div className='detailContainer'>
+                            <span className='courseHeading'>{course.title}</span><br />
+                            <a className='courseButton' href="{course.link}" target="_blank">Get Course</a>
                         </div>
                     </div>
                 )
