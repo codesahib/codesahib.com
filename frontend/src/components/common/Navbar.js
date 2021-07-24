@@ -23,11 +23,11 @@ export default function Navbar(props) {
 
     return (
         <>
-        {/* <nav className="navbar py-0 navbar-expand nav-full">
-            <a className="navbar-brand py-0" href="/home"><img src="" alt="Logo"></img></a> 
+        <nav className="navbar py-0 navbar-expand nav-full">
+            {/* <a className="navbar-brand py-0" href="/home"><img src="" alt="Logo"></img></a> 
             <button className="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
-            </button>
+            </button> */}
 
             <div className="container">
                 <div className="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarNavDropdown">
@@ -37,22 +37,21 @@ export default function Navbar(props) {
                             <Link className="nav-link" to="/home">Home</Link>
                         </li>}
 
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link" to="/projects">Tools</Link>
-                        </li>
+                        </li> */}
                         
                         <li className="nav-item">
                             <Link className="nav-link" to="/blogs">Blogs</Link>
                         </li>
 
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link" to="/free-courses">Free Courses</Link>
-                        </li>
-
+                        </li> */}
                     </ul>
                 </div>
             </div>
-        </nav> */}
+        </nav>
         {/* Not using BrowserRouter as this is causing problems with gh-pages deployment */}
         {/* <Router> */}
             <Switch>
@@ -62,7 +61,7 @@ export default function Navbar(props) {
                 <Route exact path="/blogs"><Blogs show_home_link={setHomeLink} /></Route>
                 <Route exact path="/blogs/udemy-free-courses"><UdemyLandingPage show_home_link={setHomeLink} /></Route>
                 <Route exact path="/blogs/:blog_name"><BlogPage show_home_link={setHomeLink} /></Route>
-                <Route exact path="/blogs/free-courses/:date"><CoursesforDate show_home_link={setHomeLink} /></Route>
+                <Route exact path="/blogs/udemy-free-courses/:date"><CoursesforDate show_home_link={setHomeLink} /></Route>
                 <Route><PageNotFound show_home_link={setHomeLink} /></Route>
             </Switch>
         {/* </Router> */}
