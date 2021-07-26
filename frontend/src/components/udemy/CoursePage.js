@@ -18,10 +18,13 @@ function CoursePage(props) {
     }
     else{
         return(
-           <center>
-            <h2>{this_course.title}</h2>
-            <a className='courseButton' target="_blank" href={this_course.link}>Enroll</a>
+            <center>
+                <div className='course'>
+                    <h2>{this_course.title}</h2>
+                    <a className="courseButton" target="_blank" href={this_course.link}>Enroll</a>
+                </div>
             </center>
+            
         )
     }
     
