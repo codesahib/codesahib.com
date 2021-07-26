@@ -3,6 +3,7 @@ import { Card } from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
 import Data from '../../data/courses.json'
+import Poster from '../../static/img/udemy_poster.png'
 // import './LandingPage.css'
 
 export default function LandingPage(props) {
@@ -21,7 +22,7 @@ export default function LandingPage(props) {
             { datesList === undefined? <h2 id="textNoCourses">No Courses Found</h2> : datesList.map((date)=> {
                 return(
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" />
+                        <Card.Img variant="top" src={Poster} />
                         <Card.Body>
                             <Card.Title>{date}</Card.Title>
                             <Card.Text>
