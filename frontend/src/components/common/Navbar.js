@@ -8,6 +8,7 @@ import PageNotFound from '../common/PageNotFound'
 import UdemyLandingPage from '../udemy/LandingPage'
 import CoursesforDate from '../udemy/CoursesforDate'
 import CoursePage from '../udemy/CoursePage'
+import Disclaimer from '../utils/Disclaimer'
 
 import './Navbar.css'
 
@@ -47,9 +48,14 @@ export default function Navbar(props) {
                             <Link className="nav-link" to="/blogs">Blogs</Link>
                         </li>
 
-                        {/* <li className="nav-item">
-                            <Link className="nav-link" to="/free-courses">Free Courses</Link>
-                        </li> */}
+
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/blogs/udemy-free-courses">Free Courses</Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/disclaimer">Disclaimer</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -60,6 +66,7 @@ export default function Navbar(props) {
                 {/* <Route exact path="/" component={Home}/> */}
                 <Route exact path="/"><Home show_home_link={setHomeLink} /></Route>
                 <Route exact path="/home"><Redirect to="/"/></Route>
+                <Route exact path="/disclaimer"><Disclaimer show_home_link={setHomeLink}/></Route>
                 <Route exact path="/blogs"><Blogs show_home_link={setHomeLink} /></Route>
                 <Route exact path="/blogs/udemy-free-courses"><UdemyLandingPage show_home_link={setHomeLink} /></Route>
                 <Route exact path="/blogs/:blog_name"><BlogPage show_home_link={setHomeLink} /></Route>
