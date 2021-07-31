@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/codesahib/static/css/main.363713d6.chunk.css",
-    "main.js": "/codesahib/static/js/main.539b7617.chunk.js",
-    "main.js.map": "/codesahib/static/js/main.539b7617.chunk.js.map",
-    "runtime-main.js": "/codesahib/static/js/runtime-main.cf89cc58.js",
-    "runtime-main.js.map": "/codesahib/static/js/runtime-main.cf89cc58.js.map",
-    "static/js/2.dc900c87.chunk.js": "/codesahib/static/js/2.dc900c87.chunk.js",
-    "static/js/2.dc900c87.chunk.js.map": "/codesahib/static/js/2.dc900c87.chunk.js.map",
-    "static/js/3.2842ea3e.chunk.js": "/codesahib/static/js/3.2842ea3e.chunk.js",
-    "static/js/3.2842ea3e.chunk.js.map": "/codesahib/static/js/3.2842ea3e.chunk.js.map",
-    "index.html": "/codesahib/index.html",
-    "static/css/main.363713d6.chunk.css.map": "/codesahib/static/css/main.363713d6.chunk.css.map",
-    "static/js/2.dc900c87.chunk.js.LICENSE.txt": "/codesahib/static/js/2.dc900c87.chunk.js.LICENSE.txt",
-    "static/media/thailand.eb62879b.jpg": "/codesahib/static/media/thailand.eb62879b.jpg",
-    "static/media/udemy_poster.3ac14150.png": "/codesahib/static/media/udemy_poster.3ac14150.png"
+    "main.css": "/static/css/main.363713d6.chunk.css",
+    "main.js": "/static/js/main.539b7617.chunk.js",
+    "main.js.map": "/static/js/main.539b7617.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.15a88466.js",
+    "runtime-main.js.map": "/static/js/runtime-main.15a88466.js.map",
+    "static/js/2.dc900c87.chunk.js": "/static/js/2.dc900c87.chunk.js",
+    "static/js/2.dc900c87.chunk.js.map": "/static/js/2.dc900c87.chunk.js.map",
+    "static/js/3.2842ea3e.chunk.js": "/static/js/3.2842ea3e.chunk.js",
+    "static/js/3.2842ea3e.chunk.js.map": "/static/js/3.2842ea3e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.363713d6.chunk.css.map": "/static/css/main.363713d6.chunk.css.map",
+    "static/js/2.dc900c87.chunk.js.LICENSE.txt": "/static/js/2.dc900c87.chunk.js.LICENSE.txt",
+    "static/media/thailand.eb62879b.jpg": "/static/media/thailand.eb62879b.jpg",
+    "static/media/udemy_poster.3ac14150.png": "/static/media/udemy_poster.3ac14150.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.cf89cc58.js",
+    "static/js/runtime-main.15a88466.js",
     "static/js/2.dc900c87.chunk.js",
     "static/css/main.363713d6.chunk.css",
     "static/js/main.539b7617.chunk.js"
