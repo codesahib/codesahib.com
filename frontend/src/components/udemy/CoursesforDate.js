@@ -1,6 +1,8 @@
 import {React, useState} from 'react'
 import { withRouter,Link } from 'react-router-dom'
+
 import Data from '../../data/courses.json'
+import Poster from '../../static/img/udemy_poster.png'
 
 import './CoursesforDate.css'
 
@@ -12,8 +14,9 @@ function CoursesforDate(props) {
     return (
         <>
         <center>
+            <img id="udemy-poster" src={Poster}></img>
             <div id="intro">
-                <p>Welcome to <a href="/home">codesahib.com</a></p>
+                <p>Welcome to <Link to="/home">codesahib.com</Link></p>
                 <p>Here you'll find premium certifaction courses for free. The courses come with a certification which can be added to resume/LinkedIn to get a boost in career.</p>
                 <h3>You'll always find updated Udemy course list here. So bookmark <Link to="/blogs/udemy-free-courses">this</Link> page to get latest updates daily</h3>
             </div>

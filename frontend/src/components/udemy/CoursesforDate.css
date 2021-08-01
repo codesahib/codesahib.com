@@ -1,3 +1,11 @@
+#udemy-poster {
+    width: 70%;
+    height: 70vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat:round;
+}
+
 #intro{
     background-color: #E8F5FA;
     display: flex;
