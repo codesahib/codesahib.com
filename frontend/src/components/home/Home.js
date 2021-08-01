@@ -10,7 +10,7 @@ export default function Home(props) {
         props.show_home_link(false)
     })
     
-    document.title = "Home | Gursahib Singh"
+    document.title = "Home | codesahib"
     
     return (
         <>

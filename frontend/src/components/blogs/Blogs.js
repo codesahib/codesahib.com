@@ -12,7 +12,7 @@ export default function Blogs(props) {
         props.show_home_link(true)
     })
 
-    document.title = "Blogs | Gursahib Singh"
+    document.title = "Blogs | codesahib"
     
     return (
         <div id="blogsComponent">

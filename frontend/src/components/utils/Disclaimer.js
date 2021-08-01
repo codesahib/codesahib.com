@@ -1,6 +1,9 @@
 import React from 'react'
 
 export default function Disclaimer() {
+    
+    document.title = "Disclaimer | codesahib"
+
     return (
         <center>
             <p>All information and data on this blog site is for informational purposes only.&nbsp;</p>
