@@ -21,7 +21,6 @@
     width: 70%;
     margin:  .625rem .625rem;
     box-shadow: 0 0 .3125rem .125rem gray;
-    background-color: #f8f5ea;
     justify-content: center;
 }
 
@@ -46,6 +45,8 @@
     font-size: 1.125rem;
     font-weight: bold;
     text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--secondary-clr);
 }
 
 .courseAbout {

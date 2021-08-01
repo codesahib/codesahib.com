@@ -20,7 +20,10 @@ function CoursePage(props) {
         return(
             <center>
                 <div className='course'>
-                    <h2>{this_course.title}</h2>
+                    <h2 className="courseHeading">{this_course.title}</h2>
+                    <p className="courseHeadline">{this_course.headline}</p>
+                    <h3 className="courseCreator">Creator: {this_course.creator}</h3>
+                    <h3 className="courseRating">Rating: {this_course.rating}</h3>
                     <a className="courseButton" target="_blank" href={this_course.link}>Enroll</a>
                 </div>
             </center>
