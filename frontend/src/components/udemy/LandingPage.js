@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom'
 
 import Data from '../../data/courses.json'
 import Poster from '../../static/img/udemy_poster.png'
-// import './LandingPage.css'
+
+import './LandingPage.css'
 
 export default function LandingPage(props) {
     // To resolve cannot update a component while rendering a different component warning

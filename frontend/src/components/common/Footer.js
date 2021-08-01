@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
         
             <div className="footer-copyright text-center">
-                <p>© 2021 Copyright: <Link to="/">codesahib.github.io/codesahib</Link></p>
+                <p>© 2021 Copyright: <Link to="/">codesahib.com</Link></p>
             </div>
         </footer>
     )
