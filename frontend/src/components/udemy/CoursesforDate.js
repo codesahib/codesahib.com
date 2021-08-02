@@ -14,6 +14,7 @@ function CoursesforDate(props) {
     return (
         <>
         <center>
+            <meta id="og-image" property="og:image" content={Poster} />
             <img id="udemy-poster" src={Poster}></img>
             <div id="intro">
                 <p>Welcome to <Link to="/home">codesahib.com</Link></p>
