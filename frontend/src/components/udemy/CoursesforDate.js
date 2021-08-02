@@ -1,5 +1,6 @@
 import {React, useState} from 'react'
 import { withRouter,Link } from 'react-router-dom'
+import MetaTags from 'react-meta-tags'
 
 import Data from '../../data/courses.json'
 import Poster from '../../static/img/udemy_poster.png'
@@ -14,7 +15,9 @@ function CoursesforDate(props) {
     return (
         <>
         <center>
-            <meta id="og-image" property="og:image" content={Poster} />
+            <MetaTags>
+                <meta id="og-image" property="og:image" content={Poster} />
+            </MetaTags>
             <img id="udemy-poster" src={Poster}></img>
             <div id="intro">
                 <p>Welcome to <Link to="/home">codesahib.com</Link></p>
