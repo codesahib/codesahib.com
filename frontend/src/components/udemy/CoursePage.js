@@ -1,4 +1,5 @@
-import React from 'react'
+import {React, useEffect, useState } from 'react'
+import axios from 'axios'
 import { withRouter } from 'react-router'
 
 import Data from '../../data/courses.json'
@@ -10,6 +11,22 @@ function CoursePage(props) {
     var date = props.match.params.date
 
     var this_course = Data[date][index]
+    // API call here using 'date' and course 'index'
+    // const [this_course, setCourse] = useState({});
+
+    // const url="http://localhost:8000/api/v1/udemy_courses/"+date+"/course"+index
+
+    // const getCourse = () =>{
+    //     axios.get(`${url}`)
+    //     .then(response=>{
+    //         setCourse(response.data[0].courses[0])
+    //     })
+    //     .catch(e=>console.log("Error fetching course details"))
+    // }
+    
+    // useEffect(() => {
+    //     getCourse();
+    // }, []);
 
     if(this_course === undefined){
         return(
