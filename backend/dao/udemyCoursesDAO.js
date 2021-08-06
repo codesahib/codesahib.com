@@ -21,10 +21,26 @@ export default class udemyCoursesDAO{
         }
         var courses_list = []
         courses_list = await coursesModel.find(query_args,function(err,res){
-            if(err) console.log("[udemyCoursesDAO][getCourses] Cannot fetch list of projects")
+            if(err) console.log("[udemyCoursesDAO][getCourses] Cannot fetch list of courses")
 
-            console.log("[udemyCoursesDAO][getCourses] Fetched list of projects")
+            else console.log("[udemyCoursesDAO][getCourses] Fetched list of courses")
         })
+        return courses_list
+    }
+
+    static async getCourseDetails(req,req1){
+        const this_date = req
+        const this_index = parseInt(req1)
+        
+        const query_args = {}
+        query_args.date = this_date
+
+        var courses_list = []
+        courses_list = await coursesModel.find(query_args,function(err,res){
+            if(err) console.log("[udemyCoursesDAO][getCourses] Cannot fetch course details")
+
+            else console.log("[udemyCoursesDAO][getCourses] Fetched course details") 
+        }).slice('courses', this_index, 1)
         return courses_list
     }
 
