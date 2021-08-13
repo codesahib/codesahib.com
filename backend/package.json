@@ -18,8 +18,9 @@
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "mongodb": "^3.6.10",
-    "mongoose": "^5.13.2",
+    "mongoose": "^5.13.7",
     "nodemon": "^2.0.10",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react-scripts": "^4.0.3"
   }
 }
