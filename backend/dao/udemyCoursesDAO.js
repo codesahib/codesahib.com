@@ -44,11 +44,10 @@ export default class udemyCoursesDAO{
         return courses_list
     }
 
-    static async addCourses(req,res) {
-        const this_courses=req
-        
+    static async addCourses(date,courses) {
+        const date_today = date
+        const this_courses = courses
         try {
-            var date_today = "2021-08-03"
             var courses_for_this_date = {}
             
             courses_for_this_date["date"] = date_today
