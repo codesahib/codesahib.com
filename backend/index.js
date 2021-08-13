@@ -6,7 +6,7 @@ import dotenv from "dotenv"
 import udemyCoursesDAO from "./dao/udemyCoursesDAO.js"
 
 // Include variables from .env
-dotenv.config()
+dotenv.config({path : './config.env'})
 
 const port = process.env.PORT || 8000
 

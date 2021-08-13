@@ -13,7 +13,7 @@ function CoursesforDate(props) {
     // API call here using 'date'
     // const [courseList, setCourseList] = useState([]);
 
-    // const url="http://localhost:8000/api/v1/udemy_courses/"+date
+    // const url="/api/v1/udemy_courses/"+date
 
     // const getAllCourses = () =>{
     //     axios.get(`${url}`)

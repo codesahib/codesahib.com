@@ -14,7 +14,7 @@ function CoursePage(props) {
     // API call here using 'date' and course 'index'
     // const [this_course, setCourse] = useState({});
 
-    // const url="http://localhost:8000/api/v1/udemy_courses/"+date+"/course"+index
+    // const url="/api/v1/udemy_courses/"+date+"/course"+index
 
     // const getCourse = () =>{
     //     axios.get(`${url}`)
