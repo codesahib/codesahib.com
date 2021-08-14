@@ -18,7 +18,7 @@ function CoursesforDate(props) {
     // const getAllCourses = () =>{
     //     axios.get(`${url}`)
     //     .then(response=>{
-    //         setCourseList(response.data[0].courses)
+    //         setCourseList(response.data.result[0].courses)
     //     })
     //     .catch(e=>console.log("Error fetching courses"))
     // }

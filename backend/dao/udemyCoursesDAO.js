@@ -12,20 +12,25 @@ export default class udemyCoursesDAO{
         }
     }
 
-    static async getCourses(req){
-        const this_date = req
+    static async getCourses(given_date){
+        const date = given_date
+        
         const query_args = {}
-        if(this_date){
-            console.log(`[udemyCoursesDAO][getCourses] Fetching list for date: ${this_date}`)
-            query_args.date = this_date
+        if(date){
+            console.log(`[udemyCoursesDAO][getCourses] Fetching list for date: ${date}`)
+            query_args.date = date
         }
-        var courses_list = []
-        courses_list = await coursesModel.find(query_args,function(err,res){
-            if(err) console.log("[udemyCoursesDAO][getCourses] Cannot fetch list of courses")
-
-            else console.log("[udemyCoursesDAO][getCourses] Fetched list of courses")
-        })
-        return courses_list
+        else{
+            console.log("[udemyCoursesDAO][getCourses] No date specified. Fetching all courses")
+        }
+        
+        try{
+            const courses_list = await coursesModel.find(query_args)
+            return courses_list
+        }
+        catch(err){
+            console.log(`[udemyCoursesDAO][getCourses] Cannot fetch list of courses. Error: ${err}`)
+        }
     }
 
     static async getCourseDetails(req,req1){

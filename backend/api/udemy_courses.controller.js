@@ -3,14 +3,21 @@ import fs from "fs"
 import path from "path"
 
 var __dirname = path.resolve();
-/* All the Data Manipulation takes place here */
 
+/* All the Data Manipulation takes place here */
 export default class ProjectsController {
     static async apiGetUCourses(req, res) {
-        const courses_for_date = req.params.date
+        const date = req.params.date
         try{
-            const coursesList = await UCoursesDAO.getCourses(courses_for_date)
-            res.json(coursesList)
+            const coursesList = await UCoursesDAO.getCourses(date)
+            if(coursesList.length === 0){
+                console.log("[udemy_courses.controller][apiGetUCourses] Status: 400")
+                res.status(400).json({"message":"Course list not available", "result":[]})
+            }
+            else{
+                console.log("[udemy_courses.controller][apiGetUCourses] Status: 200")
+                res.status(200).json({"message":"Success","result": coursesList})
+            }
         }
         catch(err){
             console.log(`[udemy_courses.controller][apiGetUCourses] Error: ${err}`)
