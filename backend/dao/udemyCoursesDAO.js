@@ -50,16 +50,18 @@ export default class udemyCoursesDAO{
         
     }
 
-    static async addCourses(date,courses) {
-        const date_today = date
-        const this_courses = courses
-        try {
-            var courses_for_this_date = {}
-            
-            courses_for_this_date["date"] = date_today
-            courses_for_this_date["courses"] = this_courses
+    static async addCourses(given_date,given_courses) {
+        const date = given_date
+        const courses = given_courses
 
+        var courses_for_this_date = {}
+            
+        courses_for_this_date["date"] = date
+        courses_for_this_date["courses"] = courses
+
+        try {
             await coursesModel.create(courses_for_this_date) // .create method declares new Model object and calls .save()
+            return true
         }
         catch(err){
             console.log(`[udemyCoursesDAO][addCourses] Cannot add new courses. Error: ${err}`)

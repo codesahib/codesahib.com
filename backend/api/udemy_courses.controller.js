@@ -44,14 +44,16 @@ export default class ProjectsController {
     }
 
     static async apiAddUCourses(req, res) {
-        const courses_for_date = req.params.date
+        const date = req.params.date
         // console.log("[udemy_courses.controller][apiAddUCourses] Request: \n" + JSON.stringify(courses_to_be_added,null,2))
 
         var latestCourseList = JSON.parse(fs.readFileSync(path.resolve(__dirname, "udemy_courses/courses.json"),"utf-8"))
 
         try{
-            await UCoursesDAO.addCourses(courses_for_date,latestCourseList)
-            res.json({"Response":"Courses added successfully"})
+            const status = await UCoursesDAO.addCourses(date,latestCourseList)
+            
+            if(status) res.status(200).json({"message":"Success"})
+            else res.status(400).json({"message":"Courses Not added"})
         }
         catch(err){
             console.log(`[udemy_courses.controller][apiAddUCourses] Error: ${err}`)
