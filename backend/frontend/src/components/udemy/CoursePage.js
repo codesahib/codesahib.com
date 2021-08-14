@@ -19,7 +19,7 @@ function CoursePage(props) {
     // const getCourse = () =>{
     //     axios.get(`${url}`)
     //     .then(response=>{
-    //         setCourse(response.data[0].courses[0])
+    //         setCourse(response.data.result[0].courses[0])
     //     })
     //     .catch(e=>console.log("Error fetching course details"))
     // }

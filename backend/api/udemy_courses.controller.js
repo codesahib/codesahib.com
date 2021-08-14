@@ -25,11 +25,18 @@ export default class ProjectsController {
     }
 
     static async apiCourseDetails(req, res) {
-        const request_date = req.params.date
-        const course_index = req.params.index
+        const date = req.params.date
+        const index = req.params.index
         try{
-            const coursesList = await UCoursesDAO.getCourseDetails(request_date,course_index)
-            res.json(coursesList)
+            const courseDetails = await UCoursesDAO.getCourseDetails(date,index)
+            if(courseDetails.length === 0){
+                console.log("[udemy_courses.controller][apiCourseDetails] Status: 400")
+                res.status(400).json({"message":"Course list not available", "result":[]})
+            }
+            else{
+                console.log("[udemy_courses.controller][apiCourseDetails] Status: 200")
+                res.status(200).json({"message":"Success","result": courseDetails})
+            }
         }
         catch(err){
             console.log(`[udemy_courses.controller][apiCourseDetails] Error: ${err}`)
