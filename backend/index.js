@@ -1,8 +1,9 @@
-// Connect the DB and start server
+// Connect the DB and start server from here
 
 import app from "./server.js"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
+
 import udemyCoursesDAO from "./dao/udemyCoursesDAO.js"
 
 // Include variables from .env
