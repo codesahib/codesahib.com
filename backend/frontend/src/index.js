@@ -5,14 +5,15 @@ import App from './App';
 import ScrollToTop from "./components/utils/ScrollToTop";
 import reportWebVitals from './reportWebVitals';
 
-import {HashRouter} from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom'
 
+{/* Use HashRouter instead of BrowserRouter for gh-pages */}
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

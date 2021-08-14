@@ -60,21 +60,19 @@ export default function Navbar(props) {
                 </div>
             </div>
         </nav>
-        {/* Not using BrowserRouter as this is causing problems with gh-pages deployment */}
-        {/* <Router> */}
-            <Switch>
-                {/* <Route exact path="/" component={Home}/> */}
-                <Route exact path="/"><Home show_home_link={setHomeLink} /></Route>
-                <Route exact path="/home"><Redirect to="/"/></Route>
-                <Route exact path="/disclaimer"><Disclaimer show_home_link={setHomeLink}/></Route>
-                <Route exact path="/blogs"><Blogs show_home_link={setHomeLink} /></Route>
-                <Route exact path="/blogs/udemy-free-courses"><UdemyLandingPage show_home_link={setHomeLink} /></Route>
-                <Route exact path="/blogs/:blog_name"><BlogPage show_home_link={setHomeLink} /></Route>
-                <Route exact path="/blogs/udemy-free-courses/:date"><CoursesforDate show_home_link={setHomeLink} /></Route>
-                <Route exact path="/blogs/udemy-free-courses/:date/course:index"><CoursePage show_home_link={setHomeLink} /></Route>
-                <Route><PageNotFound show_home_link={setHomeLink} /></Route>
-            </Switch>
-        {/* </Router> */}
+        
+        <Switch>
+            {/* <Route exact path="/" component={Home}/> */}
+            <Route exact path="/"><Home show_home_link={setHomeLink} /></Route>
+            <Route exact path="/home"><Redirect to="/"/></Route>
+            <Route exact path="/disclaimer"><Disclaimer show_home_link={setHomeLink}/></Route>
+            <Route exact path="/blogs"><Blogs show_home_link={setHomeLink} /></Route>
+            <Route exact path="/blogs/udemy-free-courses"><UdemyLandingPage show_home_link={setHomeLink} /></Route>
+            <Route exact path="/blogs/:blog_name"><BlogPage show_home_link={setHomeLink} /></Route>
+            <Route exact path="/blogs/udemy-free-courses/:date"><CoursesforDate show_home_link={setHomeLink} /></Route>
+            <Route exact path="/blogs/udemy-free-courses/:date/course:index"><CoursePage show_home_link={setHomeLink} /></Route>
+            <Route><PageNotFound show_home_link={setHomeLink} /></Route>
+        </Switch>
         </>
     )
 }
