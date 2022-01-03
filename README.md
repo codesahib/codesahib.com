@@ -1,4 +1,5 @@
 ### Initial setup
+First install packages in frontend and then in the backend
 npm install -g nodemon
 npm install mongoose dotenv
 
