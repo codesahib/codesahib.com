@@ -1,6 +1,5 @@
 /* All the Data Fetching from DB takes place here */
-import model from "./udemyCoursesModel.js"
-let coursesModel = model
+import coursesModel from "./udemyCoursesModel.js"
 
 export default class udemyCoursesDAO{
     
