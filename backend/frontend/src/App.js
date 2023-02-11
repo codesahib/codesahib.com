@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <header>CODESAHIB</header>
-      <Navbar/>
+      <Navbar/> {/*Content is being loaded from the Navbar*/}
       <Footer/>
     </>
   );
