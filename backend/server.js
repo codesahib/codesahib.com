@@ -8,6 +8,7 @@ import udemy_courses from "./api/udemy_courses.route.js" // For Udemy courses ro
 const __dirname = path.resolve();
 const app = express() // Make express app/server
 
+app.set('view engine', 'ejs') // View Engine for dynamic rendering
 app.use(cors()) // Middleware - Things used by express
 app.use(express.json()) // This is same as BodyParser. It's now included in express. Server can accept JSON in body of request
 
