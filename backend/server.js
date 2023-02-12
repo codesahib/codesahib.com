@@ -3,7 +3,7 @@ import express from "express" // Or const express = require('express');
 import cors from "cors"
 import path from "path"
 
-import udemy_courses from "./api/udemy_courses.route.js" // For Udemy courses routes
+import udemy_courses from "./routes/udemy_courses.js" // For Udemy courses routes
 
 const __dirname = path.resolve();
 const app = express() // Make express app/server

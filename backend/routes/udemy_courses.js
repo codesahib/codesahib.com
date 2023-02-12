@@ -1,5 +1,5 @@
 import express from "express"
-import UCoursesCtrl from "./udemy_courses.controller.js"
+import UCoursesCtrl from "../api/udemy_courses.controller.js"
 
 const router = express.Router()
 
