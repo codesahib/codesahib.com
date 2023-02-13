@@ -14,7 +14,15 @@ export default class ProjectsController {
         const date = req.params.date
         try{
             // const coursesList = await UCoursesDAO.getCourses(date)
-            const coursesList = data
+            /* Temporary fix till Mongo is not integrated */
+            var coursesList = null
+            if(date === ""){
+                coursesList = data
+            }
+            else {
+                coursesList = data[date]
+            }
+            /* *** */
             if(coursesList.length === 0){
                 console.log("[udemy_courses.controller][apiGetUCourses] Status: 400")
                 res.status(400).json({"message":"Course list not available", "result":[]})

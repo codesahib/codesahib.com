@@ -1,32 +1,31 @@
 import {React, useState, useEffect} from 'react'
-import axios from 'axios'
 import { withRouter,Link } from 'react-router-dom'
-
-// import Data from '../../data/courses.json'
 
 import Poster from '../../static/img/udemy_poster.png'
 
 import './CoursesforDate.css'
-const Data = {}
+
 function CoursesforDate(props) {
     var date = props.match.params.date;
-    const [courseList, setCourseList] = useState(Data[date])
-    // API call here using 'date'
-    // const [courseList, setCourseList] = useState([]);
+    const [courseList, setCourseList] = useState([])
 
-    // const url="/api/v1/udemy_courses/"+date
-
-    // const getAllCourses = () =>{
-    //     axios.get(`${url}`)
-    //     .then(response=>{
-    //         setCourseList(response.data.result[0].courses)
-    //     })
-    //     .catch(e=>console.log("Error fetching courses"))
-    // }
-    
-    // useEffect(() => {
-    //     getAllCourses();
-    // }, []);
+    useEffect(() => {
+        fetch('http://localhost:8000/api/v1/udemy_courses/'+date,{
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+        }).then((responseJson) => {
+            setCourseList(responseJson.result)
+        }).catch((error) => {
+            alert(error);
+        })
+    }, []);
 
     return (
         <>
