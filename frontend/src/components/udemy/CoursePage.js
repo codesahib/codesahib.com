@@ -2,10 +2,10 @@ import {React, useEffect, useState } from 'react'
 import axios from 'axios'
 import { withRouter } from 'react-router'
 
-import Data from '../../data/courses.json'
+// import Data from '../../data/courses.json'
 
 import './CoursePage.css'
-
+const Data = {}
 function CoursePage(props) {
     var index = props.match.params.index - 1
     var date = props.match.params.date

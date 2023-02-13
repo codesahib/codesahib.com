@@ -2,11 +2,12 @@ import {React, useState, useEffect} from 'react'
 import axios from 'axios'
 import { withRouter,Link } from 'react-router-dom'
 
-import Data from '../../data/courses.json'
+// import Data from '../../data/courses.json'
+
 import Poster from '../../static/img/udemy_poster.png'
 
 import './CoursesforDate.css'
-
+const Data = {}
 function CoursesforDate(props) {
     var date = props.match.params.date;
     const [courseList, setCourseList] = useState(Data[date])

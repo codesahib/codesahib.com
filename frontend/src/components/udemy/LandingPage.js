@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react'
+import { React, useEffect, useState } from 'react'
 import { Card } from 'react-bootstrap' 
 import {Link} from 'react-router-dom'
 
@@ -7,36 +7,27 @@ import Poster from '../../static/img/udemy_poster.png'
 
 import './LandingPage.css'
 
-var Data = {}
-fetch('http://localhost:8000/api/v1/udemy_courses',{
-    // fetch('https://randomuser.me/api',{
+export default function LandingPage(props) {
+    const [Data, changeData] = useState({})
+    // To resolve cannot update a component while rendering a different component warning
+    useEffect(()=>{
+        props.show_home_link(true)
+
+        fetch('http://localhost:8000/api/v1/udemy_courses',{
             method: 'GET',
-            // headers: {
-            //     'Content-Type': 'application/json',
-            // }
+            headers: {
+                'Content-Type': 'application/json',
+            }
         })
         .then((response) => {
             if (response.ok) {
                 return response.json();
             }
         }).then((responseJson) => {
-            Data = responseJson.result
-            console.log(Data)
+            changeData(responseJson.result)
         }).catch((error) => {
             alert(error);
         })
-
-
-        
-
-
-
-export default function LandingPage(props) {
-    // To resolve cannot update a component while rendering a different component warning
-    useEffect(()=>{
-        props.show_home_link(true)
-
-        
     },[])
 
 
