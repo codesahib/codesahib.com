@@ -2,6 +2,10 @@ import UCoursesDAO from "../dao/udemyCoursesDAO.js"
 import fs from "fs"
 import path from "path"
 
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const data = require("../data/courses.json")
+
 var __dirname = path.resolve();
 
 /* All the Data Manipulation takes place here */
@@ -9,7 +13,8 @@ export default class ProjectsController {
     static async apiGetUCourses(req, res) {
         const date = req.params.date
         try{
-            const coursesList = await UCoursesDAO.getCourses(date)
+            // const coursesList = await UCoursesDAO.getCourses(date)
+            const coursesList = data
             if(coursesList.length === 0){
                 console.log("[udemy_courses.controller][apiGetUCourses] Status: 400")
                 res.status(400).json({"message":"Course list not available", "result":[]})
