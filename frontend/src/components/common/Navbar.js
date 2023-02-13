@@ -1,14 +1,5 @@
 import {React, useState} from 'react'
-import { Switch, Route, Link, Redirect } from "react-router-dom"
-
-import Home from '../home/Home'
-import Blogs from '../blogs/Blogs'
-import BlogPage from '../blogs/BlogPage'
-import PageNotFound from '../common/PageNotFound'
-import UdemyLandingPage from '../udemy/LandingPage'
-import CoursesforDate from '../udemy/CoursesforDate'
-import CoursePage from '../udemy/CoursePage'
-import Disclaimer from '../utils/Disclaimer'
+import {Link } from "react-router-dom"
 
 import './Navbar.css'
 
@@ -22,8 +13,6 @@ import './Navbar.css'
 */}
 
 export default function Navbar(props) {
-    const [homeLink, setHomeLink] = useState(true);
-
     return (
         <>
         <nav className="navbar py-0 navbar-expand nav-full">
@@ -36,7 +25,7 @@ export default function Navbar(props) {
                 <div className="collapse navbar-collapse justify-content-between align-items-center w-100" id="navbarNavDropdown">
                     <ul className="navbar-nav mx-auto text-md-center text-left">
 
-                        {homeLink && <li className="nav-item">
+                        {<li className="nav-item">
                             <Link className="nav-link" to="/home">Home</Link>
                         </li>}
 
@@ -60,19 +49,6 @@ export default function Navbar(props) {
                 </div>
             </div>
         </nav>
-        
-        <Switch>
-            {/* <Route exact path="/" component={Home}/> */}
-            <Route exact path="/"><Home show_home_link={setHomeLink} /></Route>
-            <Route exact path="/home"><Redirect to="/"/></Route>
-            <Route exact path="/disclaimer"><Disclaimer show_home_link={setHomeLink}/></Route>
-            <Route exact path="/blogs"><Blogs show_home_link={setHomeLink} /></Route>
-            <Route exact path="/blogs/udemy-free-courses"><UdemyLandingPage show_home_link={setHomeLink} /></Route>
-            <Route exact path="/blogs/:blog_name"><BlogPage show_home_link={setHomeLink} /></Route>
-            <Route exact path="/blogs/udemy-free-courses/:date"><CoursesforDate show_home_link={setHomeLink} /></Route>
-            <Route exact path="/blogs/udemy-free-courses/:date/course:index"><CoursePage show_home_link={setHomeLink} /></Route>
-            <Route><PageNotFound show_home_link={setHomeLink} /></Route>
-        </Switch>
         </>
     )
 }
