@@ -1,5 +1,6 @@
-import express from "express"
-import UCoursesCtrl from "../api/udemy_courses.controller.js"
+const express = require("express")
+const UCoursesCtrl = require("../api/udemy_courses.controller.js")
+
 
 const router = express.Router()
 
@@ -11,4 +12,4 @@ router.route("/:date/course:index").get(UCoursesCtrl.apiCourseDetails)
 
 
 
-export default router
+module.exports =  router

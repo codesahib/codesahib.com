@@ -1,10 +1,10 @@
 // Connect the DB and start server from here
 
-import app from "./server.js"
-import mongoose from "mongoose"
-import dotenv from "dotenv"
+var app = require("./server.js")
+const mongoose = require("mongoose")
+const dotenv =  require("dotenv")
 
-import udemyCoursesDAO from "./dao/udemyCoursesDAO.js"
+const udemyCoursesDAO = require("./dao/udemyCoursesDAO.js")
 
 // Include variables from .env
 // dotenv.config({path : './config.env'})
@@ -12,7 +12,7 @@ import udemyCoursesDAO from "./dao/udemyCoursesDAO.js"
 const port = process.env.PORT || 8000
 
 // Connecting DB
-app.listen( ()=>{
+app.listen(port, ()=>{
     console.log(`[index] Listening on port ${port}`)
 })
 // mongoose.connect(process.env.PROJECTS_DB_URI,{ useNewUrlParser: true })

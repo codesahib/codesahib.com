@@ -1,22 +1,21 @@
-import UCoursesDAO from "../dao/udemyCoursesDAO.js"
-import fs from "fs"
-import path from "path"
+const UCoursesDAO = require("../dao/udemyCoursesDAO.js")
+const fs = require("fs")
+const path = require("path")    
 
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
+const createRequire =  require("module").createRequire;
 const data = require("../data/courses.json")
 
 var __dirname = path.resolve();
 
 /* All the Data Manipulation takes place here */
-export default class ProjectsController {
+class ProjectsController {
     static async apiGetUCourses(req, res) {
         const date = req.params.date
         try{
             // const coursesList = await UCoursesDAO.getCourses(date)
             /* Temporary fix till Mongo is not integrated */
             var coursesList = null
-            if(date === ""){
+            if(date === "" || date === undefined){
                 coursesList = data
             }
             else {
@@ -73,3 +72,5 @@ export default class ProjectsController {
         }
     }
 }
+
+module.exports = ProjectsController

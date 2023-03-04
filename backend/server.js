@@ -1,11 +1,11 @@
 // Main server code
-import express from "express" // Or const express = require('express');
-import cors from "cors"
-import path from "path"
+const express = require('express');
+const cors = require("cors")
+const path = require("path")
 
-import udemy_courses from "./routes/udemy_courses.js" // For Udemy courses routes
+const udemy_courses = require("./routes/udemy_courses.js") // For Udemy courses routes
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 const app = express() // Make express app/server
 
 app.set('view engine', 'ejs') // View Engine for dynamic rendering
@@ -33,4 +33,4 @@ app.use("/api/v1/udemy_courses", udemy_courses) // General procedure for api rou
 //   response.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
 // }); // Commented for testing
 
-export default app
+module.exports = app

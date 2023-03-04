@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const udemyCoursesSchema = new mongoose.Schema({
     date: {
@@ -42,4 +42,4 @@ catch(err){
     console.log(`[udemyCoursesDAO][model] Unable to create Model. Error: ${err}`)
 }
 
-export default model
+module.exports = model

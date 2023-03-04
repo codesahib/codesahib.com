@@ -1,7 +1,7 @@
 /* All the Data Fetching from DB takes place here */
-import coursesModel from "./udemyCoursesModel.js"
+const coursesModel = require("./udemyCoursesModel.js")
 
-export default class udemyCoursesDAO{
+class udemyCoursesDAO{
     
     // Initialize the DB connection by defining Schema and creating Model 
     static async injectDB(conn){
@@ -68,5 +68,5 @@ export default class udemyCoursesDAO{
     }
 }
 
-
+module.exports = udemyCoursesDAO
 
