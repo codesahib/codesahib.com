@@ -16,6 +16,9 @@ app.use(express.json()) // This is same as BodyParser. It's now included in expr
 app.get('/',(req,res) => {
   res.send('Hello Backend')
 });
+app.get('/api',(req,res) => {
+  res.send('API home')
+});
 
 app.use("*", (req,res) => {
   res.status(404).json({error: "[server] Page not found"})
