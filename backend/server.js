@@ -29,8 +29,8 @@ app.use("*", (req,res) => {
 
 app.use("/api/v1/udemy_courses", udemy_courses) // General procedure for api routes
 
-app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
-});
+// app.get("*", function (request, response) {
+//   response.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+// }); // Commented for testing
 
 export default app
