@@ -14,7 +14,7 @@ app.use(express.json()) // This is same as BodyParser. It's now included in expr
 
 /* [For backend testing only] Allow home page rendering from frontend */
 app.get('/',(req,res) => {
-  res.send('Hello Backend')
+  res.send("Something's cooking")
 });
 app.get('/api',(req,res) => {
   res.send('API home')
