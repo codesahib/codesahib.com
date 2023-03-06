@@ -25,13 +25,13 @@ app.use(express.static(path.join(__dirname,"frontend/build"))) // Use static fro
 
 app.use("/api/v1/udemy_courses", udemy_courses) // General procedure for api routes
 
-app.use("*", (req,res) => {
-  res.status(404).json({error: "[server] Page not found"})
-}) // Or app.all('*',(req,res) => {res.status(404).send('Not Found')})
+// app.use("*", (req,res) => {
+//   res.status(404).json({error: "[server] Page not found"})
+// }) // Or app.all('*',(req,res) => {res.status(404).send('Not Found')})
 
-
-// app.get("*", function (request, response) {
-//   response.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
-// }); // Commented for testing
+// Routing from React app
+app.get("*", function (request, response) {
+  response.sendFile(path.resolve(__dirname, "frontend/build", "index.html"));
+});
 
 module.exports = app
