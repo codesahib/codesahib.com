@@ -1,11 +1,12 @@
 import { React, useEffect, useState } from 'react'
 import { Card } from 'react-bootstrap' 
 import {Link} from 'react-router-dom'
-
+import { getEndpoint } from '../utils/Helpers'
 // import Data from '../../data/courses.json'
 import Poster from '../../static/img/udemy_poster.png'
 
 import './LandingPage.css'
+const endpoint = getEndpoint() 
 
 export default function LandingPage(props) {
     const [Data, changeData] = useState({})
@@ -13,7 +14,7 @@ export default function LandingPage(props) {
     useEffect(()=>{
         props.show_home_link(true)
 
-        fetch('http://localhost:8000/api/v1/udemy_courses',{
+        fetch(endpoint + '/api/v1/udemy_courses',{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
