@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.563dfcc4.css",
+    "main.js": "/static/js/main.de63919e.js",
+    "static/js/452.26f9e011.chunk.js": "/static/js/452.26f9e011.chunk.js",
+    "static/media/thailand.jpg": "/static/media/thailand.eb62879b06e1403da66b.jpg",
+    "static/media/udemy_poster.png": "/static/media/udemy_poster.3ac141501226509da570.png",
+    "index.html": "/index.html",
+    "main.563dfcc4.css.map": "/static/css/main.563dfcc4.css.map",
+    "main.de63919e.js.map": "/static/js/main.de63919e.js.map",
+    "452.26f9e011.chunk.js.map": "/static/js/452.26f9e011.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.563dfcc4.css",
+    "static/js/main.de63919e.js"
+  ]
+}
