@@ -1,16 +1,18 @@
 import {React, useState, useEffect} from 'react'
 import { withRouter,Link } from 'react-router-dom'
+import { getEndpoint } from '../utils/Helpers'
 
 import Poster from '../../static/img/udemy_poster.png'
 
 import './CoursesforDate.css'
 
+const endpoint = getEndpoint() 
 function CoursesforDate(props) {
     var date = props.match.params.date;
     const [courseList, setCourseList] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/v1/udemy_courses/'+date,{
+        fetch(endpoint + '/api/v1/udemy_courses/'+date,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
