@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.14468985.css",
-    "main.js": "/static/js/main.0101280c.js",
+    "main.js": "/static/js/main.d1ac7639.js",
     "static/js/496.082f0a5d.chunk.js": "/static/js/496.082f0a5d.chunk.js",
     "static/media/thailand.jpg": "/static/media/thailand.eb62879b06e1403da66b.jpg",
     "static/media/udemy_poster.png": "/static/media/udemy_poster.3ac141501226509da570.png",
     "index.html": "/index.html",
     "main.14468985.css.map": "/static/css/main.14468985.css.map",
-    "main.0101280c.js.map": "/static/js/main.0101280c.js.map",
+    "main.d1ac7639.js.map": "/static/js/main.d1ac7639.js.map",
     "496.082f0a5d.chunk.js.map": "/static/js/496.082f0a5d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14468985.css",
-    "static/js/main.0101280c.js"
+    "static/js/main.d1ac7639.js"
   ]
 }
