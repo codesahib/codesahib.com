@@ -12,6 +12,7 @@ import UdemyLandingPage from './components/udemy/LandingPage'
 import CoursesforDate from './components/udemy/CoursesforDate'
 import CoursePage from './components/udemy/CoursePage'
 import Disclaimer from './components/utils/Disclaimer'
+import Contact from './components/utils/Contact'
 
 import './App.css';
 
@@ -25,6 +26,7 @@ function App() {
             {/* <Route exact path="/" component={Home}/> */}
             <Route exact path="/"><Home show_home_link={setHomeLink} /></Route>
             <Route exact path="/home"><Redirect to="/"/></Route>
+            <Route exact path="/contact"><Contact show_home_link={setHomeLink}/></Route>
             <Route exact path="/disclaimer"><Disclaimer show_home_link={setHomeLink}/></Route>
             <Route exact path="/blogs"><Blogs show_home_link={setHomeLink} /></Route>
             <Route exact path="/blogs/udemy-free-courses"><UdemyLandingPage show_home_link={setHomeLink} /></Route>

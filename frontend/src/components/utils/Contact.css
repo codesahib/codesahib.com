@@ -1,0 +1,11 @@
+h1 a{
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+@media (max-width: 1023px) {
+    h1, h1 a {
+        font-size: 25px;
+    }
+}
