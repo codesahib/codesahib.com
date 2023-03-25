@@ -28,6 +28,13 @@ export default function Home(props) {
                 <h1 className="content-heading">Academic/Work History</h1>
                 <Timeline/>
             </div>
+            <div className="section" style={{backgroundColor: "#4d4855"}}>
+                <h1 className="content-heading">PROJECTS</h1>     
+                <div className="section-part-large" style={{backgroundColor: "#FCFCF5"}}>
+                <p className="content-para text-dark"> I've tried doing projects in many seemingly intereseting fields. The range of areas that I've worked upon are <span className="text-highlight">Web Development, Machine Learning, App Development(very basic), and Scripting.</span> I plan to work more on the <span className="text-highlight">Cloud and Automation</span> tools that will eventually help stand in sync with the changing world</p>
+                <p className="content-para text-dark"><a href='/projects'><span className="text-highlight" style={{backgroundColor: "#4d4855", borderRadius: "5px"}}>Click here!</span></a>  for a list of projects that I have done as part of academics or personal projects. I've been part of some useful industry projects whose details are available in my <a href='https://drive.google.com/file/d/1vBBbYYrLXmgqqclmI-YDkj9WbLYcxAN3/view?usp=share_link' target="_blank"><span className="text-highlight" style={{backgroundColor: "#4d4855", borderRadius: "5px"}}>resume</span></a> .</p>
+                </div>
+            </div>
         </div>
         </>
     )

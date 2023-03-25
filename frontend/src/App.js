@@ -13,7 +13,8 @@ import CoursesforDate from './components/udemy/CoursesforDate'
 import CoursePage from './components/udemy/CoursePage'
 import Disclaimer from './components/utils/Disclaimer'
 import Contact from './components/utils/Contact'
-import AboutMe from './components/utils/AboutMe'
+import AboutMe from './components/me/AboutMe'
+import Projects from './components/me/Projects'
 
 import './App.css';
 
@@ -29,6 +30,7 @@ function App() {
             <Route exact path="/home"><Redirect to="/"/></Route>
             <Route exact path="/contact"><Contact show_home_link={setHomeLink}/></Route>
             <Route exact path="/about-me"><AboutMe show_home_link={setHomeLink}/></Route>
+            <Route exact path="/projects"><Projects show_home_link={setHomeLink}/></Route>
             <Route exact path="/disclaimer"><Disclaimer show_home_link={setHomeLink}/></Route>
             <Route exact path="/blogs"><Blogs show_home_link={setHomeLink} /></Route>
             <Route exact path="/blogs/udemy-free-courses"><UdemyLandingPage show_home_link={setHomeLink} /></Route>
