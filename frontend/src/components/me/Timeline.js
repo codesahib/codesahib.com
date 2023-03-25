@@ -6,8 +6,8 @@ import './Timeline.css'
 export default function Timeline() {
     const items = [
         {
-            title: "2021-Present",
-            cardTitle: "Full time job",
+            title: "2022-Present",
+            cardTitle: "Internship",
             cardSubtitle:"Full Stack Developer",
             cardDetailedText: "BluekeyAI, Toronto"
         },
