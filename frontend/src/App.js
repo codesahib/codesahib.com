@@ -13,6 +13,7 @@ import CoursesforDate from './components/udemy/CoursesforDate'
 import CoursePage from './components/udemy/CoursePage'
 import Disclaimer from './components/utils/Disclaimer'
 import Contact from './components/utils/Contact'
+import AboutMe from './components/utils/AboutMe'
 
 import './App.css';
 
@@ -20,13 +21,14 @@ function App() {
   const [homeLink, setHomeLink] = useState(true);
   return (
     <>
-      <header>CODESAHIB</header>
+      <header id="app_header">CODESAHIB</header>
       <Navbar/>
       <Switch> {/*Content is being loaded from here*/}
             {/* <Route exact path="/" component={Home}/> */}
             <Route exact path="/"><Home show_home_link={setHomeLink} /></Route>
             <Route exact path="/home"><Redirect to="/"/></Route>
             <Route exact path="/contact"><Contact show_home_link={setHomeLink}/></Route>
+            <Route exact path="/about-me"><AboutMe show_home_link={setHomeLink}/></Route>
             <Route exact path="/disclaimer"><Disclaimer show_home_link={setHomeLink}/></Route>
             <Route exact path="/blogs"><Blogs show_home_link={setHomeLink} /></Route>
             <Route exact path="/blogs/udemy-free-courses"><UdemyLandingPage show_home_link={setHomeLink} /></Route>

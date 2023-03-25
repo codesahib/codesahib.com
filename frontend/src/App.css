@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-header {
+#app_header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,20 +28,20 @@ header {
 }
 
 @media (min-width: 768px) { 
-  header{
+  #app_header{
     font-size: 2.5rem;
     height: 40vh;
   }
 }
 
 @media (min-width: 992px) {
-  header{
+  #app_header{
     font-size: 3rem;
   }
 }
 
 @media (min-width: 1200px) { 
-  header{
+  #app_header{
     font-size: 3.5rem;
   }
 }
