@@ -6,6 +6,10 @@
     font-size: 0.95rem ;
 }
 
+#timelineComponent .card-sub-title {
+    padding: 0 20px;
+}
+
 #timelineComponent .card-sub-title, #timelineComponent .card-description p{
     font-size: 0.75rem;
 }
